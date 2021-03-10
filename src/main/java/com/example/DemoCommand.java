@@ -17,6 +17,7 @@ public class DemoCommand implements Runnable {
 
     public void run() {
         // business logic here
+        System.out.println("running ...");
         if (verbose) {
             System.out.println("Hi!");
         }
