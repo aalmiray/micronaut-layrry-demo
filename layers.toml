@@ -1,0 +1,39 @@
+[resolve]
+  useTransitivity = false
+
+[layers.micronaut]
+  modules = [
+   "ch.qos.logback:logback-classic:1.2.3",
+   "ch.qos.logback:logback-core:1.2.3",
+   "com.fasterxml.jackson.core:jackson-annotations:2.11.2",
+   "com.fasterxml.jackson.core:jackson-core:2.11.2",
+   "com.fasterxml.jackson.core:jackson-databind:2.11.2",
+   "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.11.2",
+   "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.2",
+#  "com.github.spotbugs:spotbugs-annotations:4.0.3",
+#  "com.google.code.findbugs:jsr305:3.0.2",
+   "info.picocli:picocli:4.6.1",
+   "io.micronaut.picocli:micronaut-picocli:3.2.0",
+   "io.micronaut:micronaut-aop:2.4.0",
+   "io.micronaut:micronaut-context:2.4.0",
+   "io.micronaut:micronaut-core-reactive:2.4.0",
+   "io.micronaut:micronaut-core:2.4.0",
+   "io.micronaut:micronaut-http:2.4.0",
+   "io.micronaut:micronaut-inject:2.4.0",
+   "io.micronaut:micronaut-runtime:2.4.0",
+   "io.micronaut:micronaut-validation:2.4.0",
+   "io.reactivex.rxjava2:rxjava:2.2.10",
+   "javax.annotation:javax.annotation-api:1.3.2",
+   "javax.inject:javax.inject:1",
+   "javax.validation:validation-api:2.0.1.Final",
+   "org.reactivestreams:reactive-streams:1.0.3",
+   "org.slf4j:slf4j-api:1.7.26",
+   "org.yaml:snakeyaml:1.26"]
+
+[layers.app]
+  parents = ["micronaut"]
+  modules = ["com.example:demo:0.1"]
+
+[main]
+  module = "com.example.demo"
+  class = "com.example.DemoCommand"
